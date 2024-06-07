@@ -60,7 +60,7 @@ const AcoladsSlider = () => {
           <a href="https://www.asialaw.com/Firm/asp-advocates/Profile/1295#undefined" target="_blank">
             <div className="card">
               <div className="image">
-                <img src="/images/asialaw.png" alt="" />
+                <img src="/images/asialaw.png" alt="asialaw.png" />
               </div>
             </div>
           </a>
@@ -69,7 +69,7 @@ const AcoladsSlider = () => {
           <a href="https://www.legal500.com/firms/34410-asp-advocates/35009-new-delhi-india/" target="_blank">
             <div className="card">
               <div className="image">
-                <img src="/images/legal500.png" alt="" />
+                <img src="/images/legal500.png" alt="legal500.png" />
               </div>
             </div>
           </a>
@@ -78,7 +78,7 @@ const AcoladsSlider = () => {
           <a href="https://www.forbesindia.com/legalpowerlist2021/winners.php" target="_blank">
             <div className="card forbes">
               <div className="image">
-                <img src="/images/forbes2020.png" alt="" />
+                <img src="/images/forbes2020.png" alt="forbes2021.png" />
               </div>
             </div>
           </a>
@@ -87,7 +87,7 @@ const AcoladsSlider = () => {
           <a href="https://www.forbesindia.com/legalpowerlist2022/winners-2022.php" target="_blank">
             <div className="card forbes">
               <div className="image">
-                <img src="/images/forbes.png" alt="" />
+                <img src="/images/forbes.png" alt="forbes22.png" />
               </div>
             </div>
           </a>
@@ -97,6 +97,15 @@ const AcoladsSlider = () => {
             <div className="card forbes2022">
               <div className="image">
                 <img src="/images/forbes2022.png" alt="" />
+              </div>
+            </div>
+          </a>
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="https://www.legalpowerlists.com/winners-2023" target="_blank">
+            <div className="card forbes2023">
+              <div className="image">
+                <img src="/images/forbes2023.png" alt="forbes2023.png" />
               </div>
             </div>
           </a>
@@ -133,6 +142,9 @@ const Wrapper = styled.div`
 }
 .forbes2022 img{
   width: 50%;
+}
+.forbes2023 img{
+  width: 70%;
 }
 .card{
   display: flex;
