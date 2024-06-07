@@ -55,45 +55,7 @@ const Homepage = () => {
       </div>
       <div className="acolads_section">
         <AcoladsSlider />
-        <div className="container">
-          {/* <div className="cards">
-            <a href="https://www.legal500.com/firms/34410-asp-advocates/35009-new-delhi-india/" target="_blank">
-              <div className="card">
-                <div className="image">
-                  <img src="/images/legal500.png" alt="" />
-                </div>
-              </div>
-            </a>
-            <a href="https://www.asialaw.com/Firm/asp-advocates/Profile/1295#undefined" target="_blank">
-              <div className="card">
-                <div className="image">
-                  <img src="/images/asialaw.png" alt="" />
-                </div>
-              </div>
-            </a>
-            <a href="https://www.forbesindia.com/legalpowerlist2021/winners.php" target="_blank">
-              <div className="card forbes">
-                <div className="image">
-                  <img src="/images/forbes2020.png" alt="" />
-                </div>
-              </div>
-            </a>
-            <a href="https://www.forbesindia.com/legalpowerlist2022/winners-2022.php" target="_blank">
-              <div className="card forbes">
-                <div className="image">
-                  <img src="/images/forbes.png" alt="" />
-                </div>
-              </div>
-            </a>
-            <a href="https://www.forbesindia.com/legalpowerlist2022/winners-2022.php" target="_blank">
-              <div className="card forbes">
-                <div className="image">
-                  <img src="/images/forbes2022.png" alt="" />
-                </div>
-              </div>
-            </a>
-          </div> */}
-        </div>
+        
       </div>
       <div className="proficiency_section">
         <div className="container">
