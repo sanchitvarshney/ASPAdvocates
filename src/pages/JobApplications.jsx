@@ -65,7 +65,7 @@ const JobApplications = () => {
                   <input type="file" />
                 </div>
                 <div className="input_group file">
-                  <label htmlFor="">Importent documents (If any)</label>
+                  <label htmlFor="">Important documents (If any)</label>
                   <input type="file" />
                 </div>
               </div>
