@@ -113,7 +113,7 @@ const InternshipPage = () => {
                 </div>
                 <div className="input_group file">
                   <label htmlFor="">Important documents (If any)</label>
-                  <input type="file" {...register("otherDocument", { required: true })}/>
+                  <input type="file" {...register("otherDocument")}/>
                 </div>
               </div>
               <p className="error">{(error !== "") && error}</p>
