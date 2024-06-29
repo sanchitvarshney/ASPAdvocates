@@ -1,14 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FiMail } from "react-icons/fi";
 import SolidBtn from "../components/Buttons/SolidBtn";
 import { FaLocationArrow } from "react-icons/fa";
 import { MdOutlinePhoneAndroid } from "react-icons/md";
 import { FaAngleDoubleRight } from "react-icons/fa";
-
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import Loader from "../components/Loader";
+import SuccessAlertCard from "../components/Cards/SuccessAlertCard";
 const ContactPage = () => {
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [alert,setAlert] = useState(false)
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = async (data) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_CONTACT_URL}/contactUsEspLaw`, data);
+
+      setData(response.data);
+      setAlert(true)
+      reset()
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+console.log(data)
   return (
     <Wrapper>
+      {alert && <SuccessAlertCard setAlert={setAlert} message={data?.message}/>}
       <div className="top">
         <div className="container">
           <h1 data-aos="flip-down" data-aos-duration="1000" data-aos-offset="100">
@@ -52,27 +82,33 @@ const ContactPage = () => {
                     </span>
                     Mail:
                     <a href="mailto:asp@asplaw.in" target="_blank">
-                  info@asplaw.in
-                </a>
-                /
-                <a target="_blank" href="mailto:asp@asplaw.in">
-                  asp@asplaw.in
-                </a>
+                      info@asplaw.in
+                    </a>
+                    /
+                    <a target="_blank" href="mailto:asp@asplaw.in">
+                      asp@asplaw.in
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
             <div className="contact_form">
-              <form action="">
-                <input type="text" placeholder="Fullname" data-aos="fade-up" />
-                <input type="text" placeholder="john@domain.com" data-aos="fade-up" />
-                <input type="number" placeholder="+91 000 000 0000" data-aos="fade-up" />
-                <textarea placeholder="Message" data-aos="fade-up" rows={5} />
-                <div className="btn" data-aos="fade-right">
-                  <SolidBtn>
-                    Submit
-                    <FaAngleDoubleRight />
-                  </SolidBtn>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <input type="text" placeholder="Fullname" data-aos="fade-up" {...register("userName", { required: true, maxLength: 20 })} autoComplete="off"/>
+                <input type="email" placeholder="john@domain.com" data-aos="fade-up" {...register("userEmail", { required: true })} autoComplete="off"/>
+                <input type="number" placeholder="+91 000 000 0000" data-aos="fade-up" {...register("userPhone", { required: true, maxLength: 20 })} autoComplete="off"/>
+                <textarea placeholder="Message" data-aos="fade-up" rows={5} {...register("msg", { required: true })} autoComplete="off"/>
+                <div className="btn">
+                  {loading ? (
+                    <button disabled>
+                      <Loader />
+                    </button>
+                  ) : (
+                    <button>
+                      Submit
+                      <FaAngleDoubleRight />
+                    </button>
+                  )}
                 </div>
               </form>
             </div>
@@ -191,20 +227,19 @@ const Wrapper = styled.section`
         flex-direction: column;
         gap: 15px;
 
-        .logo{
-          h1{
+        .logo {
+          h1 {
             font-size: 40px;
-            span{
+            span {
               font-family: "Roboto Slab", serif;
             }
           }
         }
-       
       }
       a {
         text-decoration: none;
         color: #00204c;
-        &:hover{
+        &:hover {
           border-bottom: 1px solid #00204c;
         }
       }
@@ -255,6 +290,28 @@ const Wrapper = styled.section`
           margin-top: 10px;
           border-radius: 3px;
           font-size: 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          padding: 10px 20px;
+          background-color: #00204c;
+          color: #fff;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          text-transform: uppercase;
+          font-weight: 600;
+          width: max-content;
+          &:hover {
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            background-color: #00204cd0;
+          }
+          &:disabled {
+            cursor: not-allowed;
+            background-color: gray;
+            padding: 8px 50px;
+          }
         }
       }
     }
@@ -276,7 +333,7 @@ const Wrapper = styled.section`
         padding: 0;
         border: none;
         position: relative;
-        &::after{
+        &::after {
           border: none;
           position: static;
         }
@@ -298,22 +355,22 @@ const Wrapper = styled.section`
       }
     }
   }
-  .consultation_section{
-    .card{
-     
-      .content{
-        p{
+  .consultation_section {
+    .card {
+      .content {
+        p {
           font-size: 15px;
         }
-        h1{
+        h1 {
           font-size: 25px;
         }
       }
-      .other_info > div{
+      .other_info > div {
         font-size: 15px;
       }
-      .contact_form{
-        input,textarea{
+      .contact_form {
+        input,
+        textarea {
           font-size: 15px;
         }
       }

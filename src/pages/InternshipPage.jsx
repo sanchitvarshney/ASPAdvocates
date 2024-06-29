@@ -1,10 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import SolidBtn from "../components/Buttons/SolidBtn";
-
+import { useForm } from "react-hook-form";
+import SuccessAlertCard from "../components/Cards/SuccessAlertCard";
+import axios from "axios";
+import Loader from "../components/Loader";
 const InternshipPage = () => {
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState(null);
+  const [error, setError] = useState("");
+  const [alert,setAlert] = useState(false)
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = async (data) => {
+    setLoading(true);
+    setError(null);
+    data.type = "internship"
+    console.log(data)
+    const formData = new FormData()
+    formData.append("userName", data.userName)
+    formData.append("userEmail", data.userEmail)
+    formData.append("userDob", data.userDob.split("-").reverse().join("-"))
+    formData.append("empGender", data.empGender)
+    formData.append("userMobile", data.userMobile)
+    formData.append("resume", data.resume[0])
+    formData.append("otherDocument", data.otherDocument[0])
+    formData.append("type", data.type)
+    console.log("formdata",formData)
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_CONTACT_URL}/internshipFormEspLaw`, formData,{
+        headers:{
+          'Content-Type': 'multipart/form-data',
+        }
+      });
+      if(response.data.status==="success"){
+        setData(response.data);
+        setAlert(true)
+        setError("")
+      }else if(response.data.status==="error"){
+        setError(response.data.message.msg);
+        
+      }
+      reset()
+    } catch (error) {
+
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <Wrapper>
+      {alert && <SuccessAlertCard setAlert={setAlert} message={data?.message}/>}
       <div className="top">
         <div className="container">
           <h1 data-aos="flip-down" data-aos-duration="1000" data-aos-offset="100">
@@ -23,32 +73,35 @@ const InternshipPage = () => {
             <hr />
           </div>
           <div className="internship_form">
-            <form action="">
+            <form  onSubmit={handleSubmit(onSubmit)}>
               <h3>PERSONAL DETAILS</h3>
               <div className="grid-3">
                 <div className="input_group">
                   <label htmlFor="">full name</label>
-                  <input type="text" />
+                  <input type="text" {...register("userName", { required: true, maxLength: 20 })}/>
                 </div>
               </div>
               <div className="grid-3">
                 <div className="input_group">
                   <label htmlFor="">date of birth</label>
-                  <input type="text" />
+                  <input type="date" {...register("userDob", { required: true, maxLength: 20 })}/>
                 </div>
                 <div className="input_group">
                   <label htmlFor="">email</label>
-                  <input type="text" />
+                  <input type="text" {...register("userEmail", { required: true})}/>
                 </div>
                 <div className="input_group">
-                  <label htmlFor="">gender</label>
-                  <input type="text" />
+                <label htmlFor="">Gender</label>
+                 <select {...register("empGender", { required: true})}>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                 </select>
                 </div>
               </div>
               <div className="grid-2">
                 <div className="input_group">
                   <label htmlFor="">phone number</label>
-                  <input type="number" />
+                  <input type="number" {...register("userMobile", { required: true })}/>
                 </div>
               </div>
               <div className="grid-2"></div>
@@ -56,14 +109,23 @@ const InternshipPage = () => {
               <div className="grid-3">
                 <div className="input_group file">
                   <label htmlFor="">Resume/CV</label>
-                  <input type="file" />
+                  <input type="file" {...register("resume", { required: true})}/>
                 </div>
                 <div className="input_group file">
                   <label htmlFor="">Important documents (If any)</label>
-                  <input type="file" />
+                  <input type="file" {...register("otherDocument", { required: true })}/>
                 </div>
               </div>
-              <SolidBtn>Submit</SolidBtn>
+              <p className="error">{(error !== "") && error}</p>
+              {loading ? (
+                    <button disabled>
+                      <Loader />
+                    </button>
+                  ) : (
+                    <button>
+                      Submit
+                    </button>
+                  )}
             </form>
           </div>
         </div>
@@ -191,9 +253,38 @@ const Wrapper = styled.section`
         background-color: #00204c19;
         border-radius: 3px;
       }
-      button {
-        border-radius: 3px;
+      .error{
+        color: red;
+        font-size: 16px;
       }
+      button {
+          padding: 10px 30px;
+          margin-top: 10px;
+          border-radius: 3px;
+          font-size: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          padding: 10px 20px;
+          background-color: #00204c;
+          color: #fff;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          text-transform: uppercase;
+          font-weight: 600;
+          width: max-content;
+          &:hover {
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            background-color: #00204cd0;
+          }
+          &:disabled {
+            cursor: not-allowed;
+            background-color: gray;
+            padding: 8px 50px;
+          }
+        }
     }
   }
   @media only screen and (max-width: 933px) {
