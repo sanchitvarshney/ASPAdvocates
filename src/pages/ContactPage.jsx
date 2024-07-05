@@ -25,9 +25,12 @@ const ContactPage = () => {
     setError(null);
     try {
       const response = await axios.post(`${import.meta.env.VITE_CONTACT_URL}/contactUsEspLaw`, data);
-
-      setData(response.data);
-      setAlert(true)
+      if(response.data.status==="success"){
+        setData(response.data);
+        setAlert(true)
+      }else{
+        setError(response.data.message.msg);
+      }
       reset()
     } catch (error) {
       setError(error.message);
@@ -98,6 +101,8 @@ console.log(data)
                 <input type="email" placeholder="john@domain.com" data-aos="fade-up" {...register("userEmail", { required: true })} autoComplete="off"/>
                 <input type="number" placeholder="+91 000 000 0000" data-aos="fade-up" {...register("userPhone", { required: true, maxLength: 20 })} autoComplete="off"/>
                 <textarea placeholder="Message" data-aos="fade-up" rows={5} {...register("msg", { required: true })} autoComplete="off"/>
+                {error && <p style={{color:"red"}}>{error}</p>}
+                {(errors.userName || errors.userEmail || errors.userPhone || errors.msg) &&  <p style={{color:"red"}}>All fields are required.</p> }
                 <div className="btn">
                   {loading ? (
                     <button disabled>

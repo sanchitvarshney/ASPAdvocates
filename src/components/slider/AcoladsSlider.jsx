@@ -57,10 +57,10 @@ const AcoladsSlider = () => {
         }}
       >
         <SwiperSlide>
-          <a href="https://www.asialaw.com/Firm/asp-advocates/Profile/1295#undefined" target="_blank">
+          <a href="https://www.asialaw.com/Firm/asp-advocates/Profile/1295#undefine" target="_blank">
             <div className="card">
               <div className="image">
-                <img src="/images/asialaw.png" alt="asialaw.png" />
+                <img src="/asialaw.png" alt="asialaw.png" />
               </div>
             </div>
           </a>
@@ -69,34 +69,34 @@ const AcoladsSlider = () => {
           <a href="https://www.legal500.com/firms/34410-asp-advocates/35009-new-delhi-india/" target="_blank">
             <div className="card">
               <div className="image">
-                <img src="/images/legal500.png" alt="legal500.png" />
+                <img src="/legal500.png" alt="legal500.png" />
               </div>
             </div>
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://www.forbesindia.com/legalpowerlist2021/winners.php" target="_blank">
+          <a href="https://www.legalpowerlists.com/winners-2022" target="_blank">
             <div className="card forbes">
               <div className="image">
-                <img src="/images/forbes2020.png" alt="forbes2021.png" />
+                <img src="/Toplawfirm2022.jpeg" alt="Toplawfirm2022.jpeg" />
               </div>
             </div>
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://www.forbesindia.com/legalpowerlist2022/winners-2022.php" target="_blank">
+          <a href="https://www.legalpowerlists.com/winners-2022" target="_blank">
             <div className="card forbes">
               <div className="image">
-                <img src="/images/forbes.png" alt="forbes22.png" />
+                <img src="/forbes2022.jpeg" alt="Forbes Top Individual Lawyer 2022" />
               </div>
             </div>
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://www.forbesindia.com/legalpowerlist2022/winners-2022.php" target="_blank">
+          <a href="https://www.legalpowerlists.com/winners-2023" target="_blank">
             <div className="card forbes2022">
               <div className="image">
-                <img src="/images/forbes2022.png" alt="" />
+                <img src="/forbes2023.jpeg" alt="Forbes Top Law Firm 2023" />
               </div>
             </div>
           </a>
@@ -105,7 +105,7 @@ const AcoladsSlider = () => {
           <a href="https://www.legalpowerlists.com/winners-2023" target="_blank">
             <div className="card forbes2023">
               <div className="image">
-                <img src="/images/forbes2023.png" alt="forbes2023.png" />
+                <img src="/IndividualLawyer2023.jpeg" alt="Forbes Top Individual Lawyer 2023" />
               </div>
             </div>
           </a>
@@ -131,21 +131,16 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 300px;
 }
 
 .swiper-slide img {
   display: block;
-  width: 70%;
-  height: 100%;
+  width: 100%;
+  height: 300px;
   object-fit: cover;
 }
-.forbes2022 img{
-  width: 50%;
-}
-.forbes2023 img{
-  width: 70%;
-}
+
 .card{
   display: flex;
   justify-content: center;
