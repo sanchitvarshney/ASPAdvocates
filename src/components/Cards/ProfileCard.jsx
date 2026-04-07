@@ -36,7 +36,7 @@ const ProfileCard = ({ person, onViewClick, className }) => {
       </div>
       <div className="content">
         <h3>{name}</h3>
-        <p className="bio">{role}</p>
+        <p className="bio">{role.length > 50 ? role.slice(0, 36) + "...." : role}</p>
         <div className="actions">
           <div className="social">
       

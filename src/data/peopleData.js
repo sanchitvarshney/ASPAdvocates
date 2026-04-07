@@ -52,7 +52,7 @@ Irith also works on international and domestic arbitrations and commercial litig
     id: 4,
     image: "/peopleImg/analiasha.png",
     name: "Annaleesha Thakur",
-    bio: "Partner at ASP Advocates",
+    bio: "--",
     description: "",
     mobile: "+91 9930 103 801",
     email: "asp@asplaw.in",
@@ -61,7 +61,7 @@ Irith also works on international and domestic arbitrations and commercial litig
     id: 5,
     image: "/peopleImg/pavni.jpg",
     name: "Pavni Tuli",
-    bio: "Dispute Resolution",
+    bio: "Dispute Resolution and International Arbitration practice",
     description: `Pavni is a part of the firm’s Dispute Resolution and International Arbitration practice. She regularly advises and represents international clients in complex commercial disputes across a broad range of sectors, including infrastructure, transportation, and natural resources, in the emerging markets throughout Asia, the Middle East, and America with a particular focus on arbitration-related matters.
  
 Her experience includes advising clients in domestic and international arbitrations, as well as handling litigation arising out of commercial disputes before various courts and tribunals in India. She is involved in all stages of dispute resolution, including pre-dispute strategy, pleadings, and post-award enforcement and challenge proceedings. She is actively involved in the firm’s compliance and monitorship matters.
@@ -101,7 +101,7 @@ Prashant also extensively works for Fintech & Financial Services, Corporate & Se
     id: 8,
     image: "/peopleImg/sulabh.png",
     name: "Sulabh Singh",
-    bio: "Partner at ASP Advocates",
+    bio: "--",
     description: "",
     mobile: "+91 7379 392 122",
     email: "asp@asplaw.in",
