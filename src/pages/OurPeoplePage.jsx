@@ -13,6 +13,7 @@ const OurPeoplePage = () => {
     <Wrapper>
       <div className="people-directory">
         <div className="container">
+               <hr data-aos="fade-in" data-aos-delay="300" />
           <div className="cards-container">
             {peopleData.map((person) => (
               <div key={person.id} className="people-card-slot">
