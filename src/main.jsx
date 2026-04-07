@@ -12,6 +12,7 @@ import ErrorPage from './pages/ErrorPage.jsx'
 import CareersPage from './pages/CareersPage.jsx'
 import InternshipPage from './pages/InternshipPage.jsx'
 import JobApplications from './pages/JobApplications.jsx'
+import OurPeoplePage from './pages/OurPeoplePage.jsx'
 const router = createBrowserRouter([
   {
     element:<App/>,
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         element:<AboutPage/>,
         path:"/about"
+      },
+           {
+        element:<OurPeoplePage/>,
+        path:"/our-people"
       },
       {
         element:<CareersPage/>,

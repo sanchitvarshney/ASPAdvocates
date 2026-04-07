@@ -29,6 +29,9 @@ const Header = () => {
                 <li>
                   <NavLink to={"/about"}>About</NavLink>
                 </li>
+                  <li>
+                  <NavLink to={"/our-people"}>Our People</NavLink>
+                </li>
                 <li className={"megamenu-link"}>
                   <NavLink to={"/practice"} className={"megamenu-link"}>
                     PROFICIENCY
@@ -74,6 +77,9 @@ const Header = () => {
           </li>
           <li onClick={() => setToggle(false)}>
             <NavLink to={"/about"}>About</NavLink>
+          </li>
+                    <li onClick={() => setToggle(false)}>
+            <NavLink to={"/our-people"}>Our People</NavLink>
           </li>
           <li className={"megamenu-link"} onClick={() => setToggle(false)}>
             <NavLink to={"/practice"} className={"megamenu-link"}>
