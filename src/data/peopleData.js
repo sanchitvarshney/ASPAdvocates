@@ -30,7 +30,6 @@ Abhishek’s practice also encompasses shareholder disputes, directors’ liabil
 Abhishek regularly represents multinational corporations in courts & tribunals across India, including the National Company Law Tribunal, the National Company Law Appellate Tribunal and the Supreme Court of India. 
  
 Abhishek has represented large US, Japanese, Chinese, European and Indian clients in projects under various phases of development including both greenfield and rehabilitation projects, where he advised in all aspects of investment structuring and restructuring, including for efficient tax and stamp duty, statutory and regulatory approvals, project documentation including financing documentations, exchange control and issues governing return on equity.
-.
 `,
     mobile: "+91 9999 201 504",
     email: "abhishek@asplaw.in",
@@ -110,7 +109,7 @@ Prashant also extensively works for Fintech & Financial Services, Corporate & Se
     id: 9,
     image: "/peopleImg/Swati.jpeg",
     name: "Swati Kumari",
-    bio: "Regulatory & Disputes",
+    bio: "--",
     description: "",
     mobile: "+91 8376 995 760",
     email: "asp@asplaw.in",
