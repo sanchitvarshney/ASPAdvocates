@@ -7,14 +7,7 @@ import { MdOutlinePhone } from "react-icons/md";
 const ProfileCard = ({ person, onViewClick, className }) => {
   if (!person) return null;
 
-  const {
-    id,
-    name,
-    bio: role,
-    image,
-    email: emailHref,
-    mobile,
-  } = person;
+  const { id, name, bio: role, image, email: emailHref, mobile } = person;
   const emailValue = String(emailHref || "").trim();
   const mobileValue = String(mobile || "").trim();
   const emailLink = emailValue
@@ -36,10 +29,9 @@ const ProfileCard = ({ person, onViewClick, className }) => {
       </div>
       <div className="content">
         <h3>{name}</h3>
-        <p className="bio">{role.length > 50 ? role.slice(0, 36) + "...." : role}</p>
+        {(id === 1 || id === 2) && <p className="bio">{role}</p>}
         <div className="actions">
           <div className="social">
-      
             {emailHref ? (
               <a
                 href={emailLink}

@@ -11,51 +11,8 @@ const OurPeoplePage = () => {
 
   return (
     <Wrapper>
-      <div className="top">
-        <div className="container">
-          <h1 data-aos="flip-down" data-aos-duration="1000" data-aos-offset="100">
-            Our People
-          </h1>
-          <hr data-aos="fade-in" data-aos-delay="300" />
-          <p data-aos="flip-down" data-aos-duration="1000" data-aos-offset="100">
-            Our firm stands at the forefront of legal excellence in India, renowned for our unwavering commitment to service excellence and client fulfillment.
-          </p>
-        </div>
-      </div>
-      <div className="about-info">
-        <div className="container">
-          <div className="image" >
-            <img src="/images/people2.png" alt="lawwomwn" data-aos-duration="1000" />
-          </div>
-          <div className="content" >
-            <p>
-              ASP Advocates is a full-service law firm comprising lawyers, company secretaries, chartered accountants, and industry-specific consultants.
-            </p>
-            <p>
-              Headquartered in New Delhi with associate offices across India including Mumbai, Kolkata, Chennai, Chandigarh, Bangalore, Lucknow, Hyderabad, Pune, and Patna.
-            </p>
-            <p>
-             Lawyers of ASP Advocates are licensed to practice across all courts and jurisdictions in India.
-            </p>
-            <p>
-               Core practice areas include Mergers & Acquisitions, Anti-Trust, Banking & Finance, Aviation & Maritime, Capital Markets, Dispute Resolution, and Corporate Commercial advisory.
-            </p>
-            <p>
-              Expertise also includes Intellectual Property protection & enforcement, Private Equity, Projects, Labour & Employment, Regulatory & Policy, and Taxation.
-            </p>
-            <p>  Partners bring extensive transactional and litigation experience across sectors including Financial Institutions, Telecom, Construction, Energy, IT/ITES, Pharma, Media, Real Estate, and Infrastructure.</p>
-          </div>
-        </div>
-      </div>
       <div className="people-directory">
         <div className="container">
-          <h1 data-aos="flip-down" data-aos-duration="1000" data-aos-offset="100">
-            Our People
-          </h1>
-          <hr data-aos="fade-in" data-aos-delay="300" />
-          <p data-aos="flip-down" data-aos-duration="1000" data-aos-offset="100">
-            Our firm stands at the forefront of legal excellence in India, renowned for our unwavering commitment to service excellence and client fulfillment.
-          </p>
           <div className="cards-container">
             {peopleData.map((person) => (
               <div key={person.id} className="people-card-slot">
@@ -167,17 +124,12 @@ const Wrapper = styled.section`
       margin-top: 80px;
       padding-top: 56px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-  
+
       row-gap: clamp(0px, 10vw, 160px);
-     
     }
-
-
 
     .cards-container > .people-card-slot:nth-child(-n + 1) {
       grid-column: span 2;
-      
-  
     }
   }
 
@@ -188,8 +140,8 @@ const Wrapper = styled.section`
       }
       .cards-container > .people-card-slot:nth-child(-n + 1) {
         grid-column: span 1;
-            margin-top: 80px;
-      padding-top: 0px;
+        margin-top: 80px;
+        padding-top: 0px;
       }
     }
   }
@@ -218,7 +170,9 @@ const Wrapper = styled.section`
 
   .about-info {
     z-index: 99;
-    background: linear-gradient(to right, #fff, #ffffffdc, #fff), url("/images/people2.png");
+    background:
+      linear-gradient(to right, #fff, #ffffffdc, #fff),
+      url("/images/people2.png");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -283,39 +237,36 @@ const Wrapper = styled.section`
       }
     }
   }
-  @media only screen and (max-width: 1024px){
+  @media only screen and (max-width: 1024px) {
     .about-info {
-    .image {
-      position: sticky;
-      top: 100px;
+      .image {
+        position: sticky;
+        top: 100px;
+      }
     }
   }
-  
-  }
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 768px) {
     .about-info {
       width: 100%;
-      .container{
+      .container {
         display: flex;
         flex-direction: column;
         gap: 20px;
       }
-      .image{
+      .image {
         position: static;
       }
-     
-  }
-  
+    }
   }
   @media only screen and (max-width: 426px) {
     .top {
       .container {
         padding: 0;
-        h1{
+        h1 {
           font-size: 25px;
           text-align: center;
         }
-        p{
+        p {
           font-size: 15px;
           text-align: center;
         }
@@ -323,26 +274,22 @@ const Wrapper = styled.section`
     }
     .about-info {
       width: 100%;
-      .container{
+      .container {
         display: flex;
         flex-direction: column;
         gap: 20px;
       }
-      .image{
+      .image {
         position: static;
         height: 300px;
       }
-     .content{
-      padding: 0;
-      p{
-        text-align: justify;
-        
+      .content {
+        padding: 0;
+        p {
+          text-align: justify;
+        }
       }
-     }
-  }
-
-
-  
+    }
   }
 `;
 export default OurPeoplePage;

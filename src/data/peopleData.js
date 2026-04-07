@@ -49,7 +49,7 @@ Irith also works on international and domestic arbitrations and commercial litig
   },
   {
     id: 4,
-    image: "/peopleImg/analiasha.png",
+    image: "/peopleImg/annalisha.png",
     name: "Annaleesha Thakur",
     bio: "--",
     description: "",
@@ -107,7 +107,7 @@ Prashant also extensively works for Fintech & Financial Services, Corporate & Se
   },
   {
     id: 9,
-    image: "/peopleImg/Swati.jpeg",
+    image: "/peopleImg/swati.png",
     name: "Swati Kumari",
     bio: "--",
     description: "",
