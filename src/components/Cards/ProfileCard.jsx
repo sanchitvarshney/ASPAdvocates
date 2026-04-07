@@ -75,8 +75,8 @@ const ProfileCard = ({ person, onViewClick, className }) => {
 const Card = styled.div`
   position: relative;
   width: 100%;
-  max-width: 300px;
-  margin-inline: auto;
+  max-width: 380px;
+
   padding: 88px 20px 20px;
   min-height: 280px;
   background: #fff;
@@ -96,9 +96,9 @@ const Card = styled.div`
 
   .image {
     position: absolute;
-    top: -5px;
-    left: 40%;
-    transform: translate(-50%, -42%);
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
     display: flex;
     justify-content: center;

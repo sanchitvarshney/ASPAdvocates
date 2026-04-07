@@ -164,23 +164,19 @@ const Wrapper = styled.section`
     .cards-container {
       display: grid;
       width: 100%;
-      margin-top: 60px;
+      margin-top: 80px;
       padding-top: 56px;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      column-gap: 32px;
-      row-gap: clamp(100px, 8vw, 120px);
-      align-items: start;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  
+      row-gap: clamp(0px, 10vw, 160px);
+     
     }
 
-    .people-card-slot {
-      min-width: 0;
-      display: flex;
-      justify-content: center;
-      overflow: visible;
-    }
 
-    .cards-container > .people-card-slot:nth-child(-n + 2) {
+
+    .cards-container > .people-card-slot:nth-child(-n + 1) {
       grid-column: span 2;
+      
   
     }
   }
@@ -190,8 +186,10 @@ const Wrapper = styled.section`
       .cards-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-      .cards-container > .people-card-slot:nth-child(-n + 2) {
+      .cards-container > .people-card-slot:nth-child(-n + 1) {
         grid-column: span 1;
+            margin-top: 80px;
+      padding-top: 0px;
       }
     }
   }
@@ -201,9 +199,12 @@ const Wrapper = styled.section`
       padding: 40px 0 60px;
       .cards-container {
         grid-template-columns: 1fr;
-        gap: 32px;
+        margin-top: 32px;
+        padding-top: 16px;
+        row-gap: 88px;
+        column-gap: 0;
       }
-      .cards-container > .people-card-slot:nth-child(-n + 2) {
+      .cards-container > .people-card-slot:nth-child(-n + 1) {
         grid-column: span 1;
       }
       h1 {
