@@ -13,7 +13,7 @@ const OurPeoplePage = () => {
     <Wrapper>
       <div className="people-directory">
         <div className="container">
-               <hr data-aos="fade-in" data-aos-delay="300" />
+          <hr data-aos="fade-in" data-aos-delay="300" />
           <div className="cards-container">
             {peopleData.map((person) => (
               <div key={person.id} className="people-card-slot">
@@ -43,17 +43,6 @@ const Wrapper = styled.section`
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    &::before {
-      position: absolute;
-      content: "";
-      left: 0px;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      height: 500px;
-      z-index: 2;
-      background-color: #0303507b;
-    }
 
     .container {
       display: flex;
@@ -107,7 +96,7 @@ const Wrapper = styled.section`
     }
     hr {
       height: 0;
-      border: 1px solid #00204c;
+      border: 1px solid #fff;
       width: 100px;
       margin: 10px 0 0;
     }
@@ -138,8 +127,12 @@ const Wrapper = styled.section`
     .people-directory {
       .cards-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 44px;
+        padding-top: 32px;
+        row-gap: 120px;
+        column-gap: 24px;
       }
-      .cards-container > .people-card-slot:nth-child(-n + 1) {
+      .cards-container > .people-card-slot:nth-child(-n + 2) {
         grid-column: span 1;
         margin-top: 80px;
         padding-top: 0px;
@@ -159,6 +152,8 @@ const Wrapper = styled.section`
       }
       .cards-container > .people-card-slot:nth-child(-n + 1) {
         grid-column: span 1;
+        margin-top: 80px;
+        padding-top: 0px;
       }
       h1 {
         font-size: 28px;

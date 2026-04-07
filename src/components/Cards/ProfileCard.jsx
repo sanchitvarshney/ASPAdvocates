@@ -202,6 +202,20 @@ const Card = styled.div`
     }
   }
 
+  @media (max-width: 1100px) and (min-width: 769px) {
+    max-width: 330px;
+    padding: 78px 18px 18px;
+
+    .image {
+      transform: translate(-50%, -44%);
+
+      img {
+        width: 180px;
+        height: 200px;
+      }
+    }
+  }
+
   @media (max-width: 480px) {
     padding: 72px 16px 18px;
     max-width: 100%;
