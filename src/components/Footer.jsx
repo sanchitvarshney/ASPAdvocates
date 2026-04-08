@@ -54,6 +54,7 @@ const Footer = () => {
               <li>
                 <Link to="/">Home</Link>
               </li>
+
               <li>
                 <Link to="/about">About</Link>
               </li>
@@ -62,6 +63,9 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/practice">proficiency</Link>
+              </li>
+              <li>
+                <Link to="/key-contacts">Key Contacts</Link>
               </li>
             </ul>
           </div>
@@ -74,7 +78,10 @@ const Footer = () => {
               </form>
             </div>
             <div className="social">
-              <a href="https://www.linkedin.com/company/asp-advocates" target="_blank">
+              <a
+                href="https://www.linkedin.com/company/asp-advocates"
+                target="_blank"
+              >
                 <FaLinkedinIn size={30} />{" "}
               </a>
             </div>
@@ -331,6 +338,5 @@ const Wrapper = styled.footer`
       }
     }
   }
- 
 `;
 export default Footer;

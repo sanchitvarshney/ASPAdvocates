@@ -12,7 +12,9 @@ const Header = () => {
 
   return (
     <>
-      {showPopup && <Consultation toggleState={setShowPopup} toggleValue={false} />}
+      {showPopup && (
+        <Consultation toggleState={setShowPopup} toggleValue={false} />
+      )}
       <Wrapper>
         <div className={`navbar`}>
           <div className="nav-content container">
@@ -29,10 +31,14 @@ const Header = () => {
                 <li>
                   <NavLink to={"/about"}>About</NavLink>
                 </li>
+
                 <li className={"megamenu-link"}>
                   <NavLink to={"/practice"} className={"megamenu-link"}>
                     PROFICIENCY
                   </NavLink>
+                </li>
+                <li>
+                  <NavLink to={"/key-contacts"}>KEY CONTACTS</NavLink>
                 </li>
                 <li className={"megamenu-link"}>
                   <NavLink to={"/career"} className={"megamenu-link"}>
@@ -56,7 +62,11 @@ const Header = () => {
               </ul>
               <div className="btn">
                 <div className="menu">
-                  <FiMenu size={25} cursor={"pointer"} onClick={() => setToggle(true)} />
+                  <FiMenu
+                    size={25}
+                    cursor={"pointer"}
+                    onClick={() => setToggle(true)}
+                  />
                 </div>
               </div>
             </div>
@@ -66,7 +76,11 @@ const Header = () => {
 
       <Sidebar className={`${toggle ? "open" : ""}`}>
         <div className="close">
-          <RxCross2 size={20} cursor={"pointer"} onClick={() => setToggle(false)} />
+          <RxCross2
+            size={20}
+            cursor={"pointer"}
+            onClick={() => setToggle(false)}
+          />
         </div>
         <ul className="nav-link">
           <li onClick={() => setToggle(false)}>
@@ -75,10 +89,14 @@ const Header = () => {
           <li onClick={() => setToggle(false)}>
             <NavLink to={"/about"}>About</NavLink>
           </li>
+
           <li className={"megamenu-link"} onClick={() => setToggle(false)}>
             <NavLink to={"/practice"} className={"megamenu-link"}>
               PROFICIENCY
             </NavLink>
+          </li>
+          <li onClick={() => setToggle(false)}>
+            <NavLink to={"/key-contacts"}>KEY CONTACTS</NavLink>
           </li>
           <li onClick={() => setToggle(false)}>
             <NavLink to={"/career"} className={"megamenu-link"}>
@@ -267,7 +285,9 @@ const Sidebar = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow:
+    rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   padding: 10px;
   transition: all 0.5s;
   &.open {

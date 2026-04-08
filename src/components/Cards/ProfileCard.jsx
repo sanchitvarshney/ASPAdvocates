@@ -2,116 +2,232 @@ import React from "react";
 import styled from "styled-components";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import { MdLocationOn } from "react-icons/md";
-import { FaXTwitter } from "react-icons/fa6";
+import { MdOutlinePhone } from "react-icons/md";
 
-const ProfileCard = () => {
+const ProfileCard = ({ person, onViewClick, className }) => {
+  if (!person) return null;
+
+  const { id, name, bio: role, image, email: emailHref, mobile } = person;
+  const emailValue = String(emailHref || "").trim();
+  const mobileValue = String(mobile || "").trim();
+  const emailLink = emailValue
+    ? emailValue.startsWith("mailto:")
+      ? emailValue
+      : `mailto:${emailValue}`
+    : "";
+
   return (
-    <Card>
-      <div className="card_top">
-
-      </div>
+    <Card className={className}>
       <div className="image">
-        <img src="/images/abhishek-seth.png" alt="" />
+        <img
+          src={image}
+          alt={`${name}`}
+          style={{
+            objectPosition: id === 9 ? "0% 0%" : id === 6 ? "0% 0%" : "center",
+          }}
+        />
       </div>
       <div className="content">
-        <h3>Abhishek Seth</h3>
-        <p className="bio">Partner at ASP Advocates</p>
-
-        <p className="experties">Corporate Restructuring | Mergers & Acquisitions (M&A) | Dispute Resolution...</p>
-        <div className="loaction">
-          <MdLocationOn />
-          delhi
-        </div>
-        <div className="social">
-          <a href="">
-            <FaLinkedinIn />{" "}
-          </a>
-          <a href="">
-            <MdOutlineEmail />
-          </a>
-          <a href="">
-            <FaXTwitter />
-          </a>
+        <h3>{name}</h3>
+        {(id === 1 || id === 2) && <p className="bio">{role}</p>}
+        <div className="actions">
+          <div className="social">
+            {emailHref ? (
+              <a
+                href={emailLink}
+                aria-label={`Contact ${name}`}
+                title={emailValue}
+              >
+                <MdOutlineEmail />
+              </a>
+            ) : null}
+            {mobileValue ? (
+              <a
+                href={`tel:${mobileValue.replace(/\s+/g, "")}`}
+                aria-label={`Call ${name}`}
+                title={mobileValue}
+              >
+                <MdOutlinePhone />
+              </a>
+            ) : null}
+          </div>
+          <button
+            type="button"
+            className="view-btn"
+            onClick={() => onViewClick?.(person)}
+          >
+            View
+          </button>
         </div>
       </div>
     </Card>
   );
 };
+
 const Card = styled.div`
-position: relative;
-border: 1px solid #00204c;
-overflow: hidden;
-gap: 20px;
-border-radius: 4px;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-transition: all 0.5s;
-  &:hover{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transition: all 0.5s;
-    transform: scale(1.03);
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+
+  padding: 88px 20px 20px;
+  min-height: 300px;
+  background: #fff;
+  border: 1px solid rgba(0, 32, 76, 0.1);
+  border-radius: 4px;
+  box-shadow: rgba(0, 32, 76, 0.08) 0 4px 24px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    box-shadow: rgba(0, 32, 76, 0.14) 0 12px 32px;
+    transform: translateY(-2px);
   }
-  .card_top{
-    width: 100%;
-    height: 100px;
-    background-color: #00204c;
-}
+
   .image {
-  
-    
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
     display: flex;
     justify-content: center;
-    align-items: end;
+    pointer-events: none;
 
-    img {   
-  height: 150px;
-   width: 150px;
-   border-radius: 50%;
-   border: 1px solid #00204c;
-   padding: 7px;
-   position: relative;
-   margin-top: -80px;
-   background-color: #d6ecf5;
+    img {
+      pointer-events: auto;
+      width: 200px;
+      max-width: min(200px, 75vw);
+      height: 250px;
+      object-fit: cover;
+      border: 0;
+      border-bottom: 8px solid transparent;
+      border-image: linear-gradient(to left, #00204c 50%, transparent 50%) 1;
     }
   }
-  .content{
+
+  .content {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 20px 20px 70px ;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    .bio{
-        font-size: 15px;
-        color: #00204c;
-  }
-    .experties{
-        font-size: 15px;
-        color: #00204c;
+    gap: 8px;
+    flex: 1;
+    justify-content: flex-end;
+    text-align: left;
+    margin-top: auto;
+    padding-top: 8px;
+
+    h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #00204c;
+      line-height: 1.3;
     }
-    .loaction{
-        display: flex;
-        align-items: center;
-        gap: 5px;   
-        text-transform: capitalize;
+
+    .bio {
+      margin: 0;
+      font-size: 15px;
+      color: #00204c;
+      opacity: 0.9;
+      text-align: left;
     }
-    .social{
-        display: flex;
-        gap: 10px;
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(0, 32, 76, 0.1);
+    }
+
+    .social {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      a {
+        display: inline-flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        bottom: 0;
-        height: 50px;
-        width: 100%;
-        background-color: #00204c;
-        a{
-            color: #fff;
-            font-size: 20px;
-        }   
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        color: #00204c;
+        background: rgba(0, 32, 76, 0.06);
+        font-size: 18px;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease,
+          transform 0.2s ease;
+
+        &:hover {
+          background: #00204c;
+          color: #fff;
+          transform: translateY(-1px);
+        }
+      }
     }
-}
+
+    .view-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #fff;
+      background: #00204c;
+      border: 1px solid #00204c;
+      border-radius: 2px;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+      font-family: inherit;
+
+      &:hover {
+        background: #fff;
+        color: #00204c;
+      }
+    }
+  }
+
+  @media (max-width: 1100px) and (min-width: 769px) {
+    max-width: 330px;
+    padding: 78px 18px 18px;
+
+    .image {
+      transform: translate(-50%, -44%);
+
+      img {
+        width: 180px;
+        height: 200px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 72px 16px 18px;
+    max-width: 100%;
+
+    .image {
+      transform: translate(-50%, -36%);
+
+      img {
+        height: 200px;
+      }
+    }
+  }
 `;
+
 export default ProfileCard;
