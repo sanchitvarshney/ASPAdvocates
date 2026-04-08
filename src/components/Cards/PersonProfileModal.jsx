@@ -71,7 +71,9 @@ const PersonProfileModal = ({ person, onClose }) => {
           </div>
           <div className="intro">
             <h2 id="profile-modal-title">{person.name}</h2>
-            <p className="role">{person.bio}</p>
+            {(person.id === 1 || person.id === 2) && (
+              <p className="role">{person.bio}</p>
+            )}
             <div className="contact-list">
               {emailValue ? (
                 <a

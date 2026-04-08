@@ -114,12 +114,15 @@ const Wrapper = styled.section`
       margin-top: 80px;
       padding-top: 56px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-
       row-gap: clamp(0px, 10vw, 160px);
     }
 
     .cards-container > .people-card-slot:nth-child(-n + 1) {
       grid-column: span 2;
+      margin-left: 200px;
+    }
+    .cards-container > .people-card-slot:nth-child(2) {
+      margin-left: -200px;
     }
   }
 
@@ -134,8 +137,9 @@ const Wrapper = styled.section`
       }
       .cards-container > .people-card-slot:nth-child(-n + 2) {
         grid-column: span 1;
-        margin-top: 80px;
+        margin-top: 40px;
         padding-top: 0px;
+        margin-left: 0px;
       }
     }
   }
@@ -152,7 +156,7 @@ const Wrapper = styled.section`
       }
       .cards-container > .people-card-slot:nth-child(-n + 1) {
         grid-column: span 1;
-        margin-top: 80px;
+        margin-top: 40px;
         padding-top: 0px;
       }
       h1 {
