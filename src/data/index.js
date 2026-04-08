@@ -85,42 +85,42 @@ export const practiceAreasLinks = [
 //homepage data---------------------------------------------------------------------------------------
 export const expertiesCardDate = [
     {
-        path: "/practice",
+        path: "/practice#litigation-and-arbitration",
         title: "Litigation & Arbitration",
         img: "/images/litigation.png"
       },
       {
-        path: "/practice",
+        path: "/practice#corporate-and-commercial",
         title: "Corporate & Commercial",
         img: "/images/commercial.png"
       },
       {
-        path: "/practice",
+        path: "/practice#energy-and-power",
         title: "Energy & Power",
         img: "/images/power.png"
       },
       {
-        path: "/practice",
+        path: "/practice#real-estate",
         title: "Real Estate",
         img: "/images/real-estate.png"
       },
       {
-        path: "/practice",
+        path: "/practice#employment-and-labour",
         title: "Employment & Labour",
         img: "/images/employment.png"
       },
       {
-        path: "/practice",
+        path: "/practice#food-and-beverage",
         title: "Food & Beverage",
         img: "/images/food.png"
       },
       {
-        path: "/practice",
+        path: "/practice#intellectual-property",
         title: "Intellectual Property",
         img: "/images/intellectual.png"
       },
       {
-        path: "/practice",
+        path: "/practice#pharma-and-life-sciences",
         title: "Pharma & Life Science",
         img: "/images/pharma.png"
       }

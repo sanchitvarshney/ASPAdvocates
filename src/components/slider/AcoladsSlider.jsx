@@ -110,6 +110,15 @@ const AcoladsSlider = () => {
             </div>
           </a>
         </SwiperSlide>
+             <SwiperSlide>
+          <a href="https://www.legalpowerlists.com/winners-2023" target="_blank">
+            <div className="card forbes2022">
+              <div className="image">
+                <img src="/top2024.png" alt="Forbes Top Law Firm 2024" />
+              </div>
+            </div>
+          </a>
+        </SwiperSlide>
       </Swiper>
     </Wrapper>
   );
