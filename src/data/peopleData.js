@@ -51,8 +51,13 @@ Irith also works on international and domestic arbitrations and commercial litig
     id: 4,
     image: "/peopleImg/annalisha.png",
     name: "Annaleesha Thakur",
-    bio: "--",
-    description: "",
+    bio: "Corporate & Commercial",
+    description: `Annaleesha is a corporate and commercial lawyer with significant experience advising companies on complex legal and transactional matters, with a focus on drafting, reviewing, and negotiating a wide range of commercial agreements, transactional advisie and developing internal policies tailored to the operational needs of private enterprises.
+
+Her expertise extends to a broad spectrum of commercial contracts, such as joint venture agreements, distribution and supply agreements, trade agreements, intellectual property-related agreements, documentation relating to financial assistance and security arrangements, business purchase agreements, shareholders’ agreements, non-compete agreements, non-disclosure agreements, employment agreements, and transition agreements. 
+
+She regularly advises multinational corporations on day-to-day legal and regulatory matters, including corporate compliance, data protection and EPR. In addition to her corporate and commercial work, she has vast experience across multiple practice areas, including matters relating to customs valuation, insurance, and real estate transactions.
+`,
     mobile: "+91 9930 103 801",
     email: "asp@asplaw.in",
   },
@@ -99,18 +104,40 @@ Prashant also extensively works for Fintech & Financial Services, Corporate & Se
   {
     id: 8,
     image: "/peopleImg/sulabh.png",
-    name: "Sulabh Singh",
-    bio: "--",
-    description: "",
+    name: "Sulabh Singh Chauhan",
+    bio: "Real Estate Practice Group & has pan-India",
+    description: `Sulabh is a part of the firms’ Real Estate Practice Group and has pan-India experience in the practice of real estate and construction.  He has experience in advising various real estate funds, multi-national companies, lenders, borrowers, retailers, institutional and non-institutional real estate investors, developers, and operators in a broad range of business arena.
+
+His practice areas include advising on all aspects of investments into real estate projects, creation of security, sale and purchase of real properties, including commercial leasing, due diligence, structuring, negotiation and documentation of the transaction, drafting and negotiating agreements relating to sale, mortgage, loans, license, construction, services, agency & franchise, litigation and arbitration related to real properties, among many others and advising domestic and international corporate clients on their general legal requirements. 
+
+Sulabh’s practice also has a strong focus on regulatory contentious matters and he regularly represents Indian and multi national corporations before courts and tribunals across India.
+`,
     mobile: "+91 7379 392 122",
+    email: "asp@asplaw.in",
+  },
+  {
+    id: 8,
+    image: "/peopleImg/diksha.jpeg",
+    name: "Diksha Singh",
+    bio: "Corporate & Commercial",
+    description: `Diksha is a part of the firm’s Corporate and Commercial Practice group. Her  practice spans across public market M&A, buybacks, joint ventures and private equity transactions. She extensively advises Indian and international clients on Indian corporate and securities laws matters.
+ 
+Diskha specializes in general corporate advisory and transactional matters with a strong emphasis on Private Equity and M&A transactions. She has represented prominent corporate houses, promoters, private equity funds and financial institutions in complex M&A transactions and private equity investments. She has a diverse portfolio of work across various sectors, including financial services, e-commerce, consumer goods, retail, pharmaceuticals, manufacturing, auto industry, and infrastructure.
+`,
+    mobile: "+91 8447 309 799",
     email: "asp@asplaw.in",
   },
   {
     id: 9,
     image: "/peopleImg/swati.png",
-    name: "Swati Kumari",
-    bio: "--",
-    description: "",
+    name: "Swati Mishra",
+     bio: "Corporate & Commercial",
+    description: `Swati is a qualified Company Secretary and is part of the firm’s Corporate and Compliance practice group. Swati specialises in general corporate advisory and transactional matters with a strong emphasis on Private Equity and M&A transactions.
+
+She has represented prominent corporate houses, promoters, private equity funds, banks, and financial institutions in complex M&A transactions and private equity investments. She has a diverse portfolio of work on private equity investments and M&A transactions across various sectors, including financial services, e-commerce, consumer goods, retail, pharmaceuticals, manufacturing, auto industry, and infrastructure.
+
+Swati advises clients on corporate, secretarial, and regulatory matters, including company law, FEMA regulations, cross-border transactions, and business commencement and operations in India. She assists clients in obtaining regulatory approvals while ensuring compliance to statutory requirements.
+`,
     mobile: "+91 8376 995 760",
     email: "asp@asplaw.in",
   },
