@@ -131,7 +131,7 @@ Diskha specializes in general corporate advisory and transactional matters with 
     id: 9,
     image: "/peopleImg/swati.png",
     name: "Swati Mishra",
-     bio: "Corporate & Commercial",
+    bio: "Corporate & Commercial",
     description: `Swati is a qualified Company Secretary and is part of the firm’s Corporate and Compliance practice group. Swati specialises in general corporate advisory and transactional matters with a strong emphasis on Private Equity and M&A transactions.
 
 She has represented prominent corporate houses, promoters, private equity funds, banks, and financial institutions in complex M&A transactions and private equity investments. She has a diverse portfolio of work on private equity investments and M&A transactions across various sectors, including financial services, e-commerce, consumer goods, retail, pharmaceuticals, manufacturing, auto industry, and infrastructure.
@@ -139,6 +139,18 @@ She has represented prominent corporate houses, promoters, private equity funds,
 Swati advises clients on corporate, secretarial, and regulatory matters, including company law, FEMA regulations, cross-border transactions, and business commencement and operations in India. She assists clients in obtaining regulatory approvals while ensuring compliance to statutory requirements.
 `,
     mobile: "+91 8376 995 760",
+    email: "asp@asplaw.in",
+  },
+  {
+    id: 9,
+    image: "/peopleImg/alrip.jpeg",
+    name: "Alrip Lepcha",
+    bio: "M&A",
+    description: `Alrip specialises in advising on M&A, Private Equity transactions and Corporate Governance. She has extensive experience in advising large Indian groups, Global corporations, and Private Equity clients on complex transactions. She regularly advises listed companies, their sponsors, acquirers and investors on a broad range of transactions including control acquisitions and exits, corporate restructurings and joint ventures.
+ 
+Given her experience in the corporate and commercial practice and advising various stakeholders, Alrip is an integral part of the Firm’s corporate governance initiatives and advisory practice and regularly advises boards on corporate governance and crisis management.
+`,
+    mobile: "+91 9953 448 968",
     email: "asp@asplaw.in",
   },
 ];
