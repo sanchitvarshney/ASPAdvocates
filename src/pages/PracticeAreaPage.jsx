@@ -3,18 +3,61 @@ import styled from "styled-components";
 import { practiceAreasLinks } from "../data";
 import { FaAnglesRight } from "react-icons/fa6";
 import ScrollIntoView from "react-scroll-into-view";
+import { useLocation } from "react-router-dom";
 
 const PracticeAreaPage = () => {
   const [activeLink, setActiveLink] = useState("");
   const scrolledRef = useRef(null);
+  const location = useLocation();
 
   const handleLinkClick = (id) => {
     setActiveLink(id);
   };
 
   useEffect(() => {
-    setActiveLink(practiceAreasLinks[0].path);
-  }, []);
+    const validPaths = new Set(practiceAreasLinks.map((item) => item.path));
+    const hash = location.hash.replace("#", "");
+    if (hash && validPaths.has(hash)) {
+      setActiveLink(hash);
+    } else {
+      setActiveLink(practiceAreasLinks[0].path);
+    }
+  }, [location.hash]);
+
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    if (!hash) return;
+
+    let tries = 0;
+    const maxTries = 20;
+    const offset = 130;
+    const scrollToHash = () => {
+      const target = document.getElementById(hash);
+      if (!target) {
+        tries += 1;
+        if (tries < maxTries) {
+          window.requestAnimationFrame(scrollToHash);
+        }
+        return;
+      }
+
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({
+        top: Math.max(top, 0),
+        behavior: "smooth",
+      });
+    };
+
+    const timer = window.setTimeout(scrollToHash, 40);
+    return () => window.clearTimeout(timer);
+  }, [location.hash]);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll(".service_details p[id]");
+    sections.forEach((node) => {
+      node.classList.toggle("is-active-heading", node.id === activeLink);
+    });
+  }, [activeLink]);
   return (
     <Wrapper>
       <div className="top">
@@ -467,15 +510,14 @@ const Wrapper = styled.section`
         p[id] {
           scroll-margin-top: 140px;
         }
-        p[id]:target strong {
+        p[id]:target strong,
+        p[id].is-active-heading strong {
           display: inline-block;
-
           color: #00204c;
           padding: 2px 8px;
           border-radius: 3px;
           font-size: 1.05em;
           transform: scale(1.1);
-       
           transition:
             transform 0.2s ease,
             font-size 0.2s ease,
