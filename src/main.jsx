@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       },
            {
         element:<OurPeoplePage/>,
-        path:"/our-people"
+        path:"/key-contacts"
       },
       {
         element:<CareersPage/>,

@@ -38,7 +38,7 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/our-people"}>Our People</NavLink>
+                  <NavLink to={"/key-contacts"}>KEY CONTACTS</NavLink>
                 </li>
                 <li className={"megamenu-link"}>
                   <NavLink to={"/career"} className={"megamenu-link"}>
@@ -96,7 +96,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li onClick={() => setToggle(false)}>
-            <NavLink to={"/our-people"}>Our People</NavLink>
+            <NavLink to={"/key-contacts"}>KEY CONTACTS</NavLink>
           </li>
           <li onClick={() => setToggle(false)}>
             <NavLink to={"/career"} className={"megamenu-link"}>
