@@ -70,7 +70,7 @@ const Card = styled.div`
   max-width: 380px;
 
   padding: 88px 20px 20px;
-  min-height: 280px;
+  min-height: 300px;
   background: #fff;
   border: 1px solid rgba(0, 32, 76, 0.1);
   border-radius: 4px;
@@ -100,7 +100,7 @@ const Card = styled.div`
       pointer-events: auto;
       width: 200px;
       max-width: min(200px, 75vw);
-      height: 220px;
+      height: 250px;
       object-fit: cover;
       border: 0;
       border-bottom: 8px solid transparent;
