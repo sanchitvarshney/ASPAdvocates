@@ -114,6 +114,7 @@ const Wrapper = styled.section`
       margin-top: 80px;
       padding-top: 56px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+       column-gap: 60px; 
       row-gap: clamp(0px, 10vw, 160px);
     }
 
