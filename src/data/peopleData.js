@@ -4,14 +4,27 @@ const peopleData = [
     image: "/peopleImg/abhixit.jpg",
     name: "Abhixit Singh",
     bio: "Partner",
-    description: `Abhixit Singh is an experienced counsel and heads the firm’s practice of International Arbitration and Construction & Projects. He advises and represents clients on complex, cross-border investments and projects, and acts in high-stakes disputes. He regularly arbitrates under the rules of the major arbitral institutions, as well as under the UNCITRAL Rules. Abhixit also serves as a Specialist Mediator with the Singapore International Mediation Centre. 
- 
-Abhixit also regularly works with client project teams during the design and construction phases of projects to help them to resolve contractual issues and disputes or to mitigate their impact as and when they arise, with a view to avoiding expensive litigation and arbitration.
- 
-In addition to arbitration and commercial litigation, Abhixit Singh has substantial experience in representing multinationals in trade and customs matters, as well as in all aspects of their licensing and compliance requirements. He has particular expertise in complex regulatory matters involving foreign ownership issues, anti-bribery, competition, and data protection, focusing on both compliance and investigations. Abhixit’s practice focuses on highly regulated industries such as telecommunications, e-commerce, tobacco, alcohol, pharmaceutical, and food and beverage.
- 
-Abhixit also specialises in foreign investment, where he has assisted in facilitating and closing multiple M&A transactions across major industries. He is also regarded by clients for his responsiveness and expertise in particularly greenfield investments, and he has been behind the setup of a large number of companies in India.
- 
+    description: `Abhixit Singh is an experienced counsel and heads the firm’s practice of International Arbitration and
+Construction &amp; Projects. He advises and represents clients on complex, cross-border investments
+and projects, and acts in high-stakes disputes. He regularly arbitrates under the rules of the major
+arbitral institutions, as well as under the UNCITRAL Rules. Abhixit also serves as a Specialist Mediator
+with the Singapore International Mediation Centre.
+
+Abhixit also regularly works with client project teams during the design and construction phases of
+projects to help them to resolve contractual issues and disputes or to mitigate their impact as and
+when they arise, with a view to avoiding expensive litigation and arbitration. /n
+
+In addition to arbitration and commercial litigation, Abhixit Singh has substantial experience in
+representing multinationals in trade and customs matters, as well as in all aspects of their licensing
+and compliance requirements. He has particular expertise in complex regulatory matters involving
+foreign ownership issues, anti-bribery, competition, and data protection, focusing on both
+compliance and investigations. Abhixit’s practice focuses on highly regulated industries such as
+telecommunications, e-commerce, tobacco, alcohol, pharmaceutical, and food and beverage.
+
+Abhixit also specialises in foreign investment, where he has assisted in facilitating and closing
+multiple M&amp;A transactions across major industries. He is also regarded by clients for his
+responsiveness and expertise in particularly greenfield investments, and he has been behind the
+setup of a large number of companies in India.
 `,
     mobile: "+91 9811722213",
     email: "abhixit@asplaw.in",
@@ -21,16 +34,37 @@ Abhixit also specialises in foreign investment, where he has assisted in facilit
     image: "/peopleImg/abhishek.png",
     name: "Abhishek Seth",
     bio: "Partner",
-    description: `Abhishek heads the Restructuring & Insolvency, Competition & Antitrust and Trade Practice. He enjoys an extensive practice particularly in corporate restructuring and contentious insolvency, as well as financial disputes, investigations, fraud and asset recovery. With over 20 years of experience, Abhishek  has been a forerunner in niche areas of the law, including Competition (merger control, cartels, investigations, etc), Trade (export controls, FTAs, sanctions etc), and Consumer Protection. He has strong secondary practices in Employment, Environmental (EHS) & Sustainability (ESG), Corporate Governance and Telco/Media Laws. 
- 
-Abhishek has been at the forefront of major restructurings and insolvencies in the region, and has experience acting for debtors and financial institution creditors in corporate restructuring exercises, He has also advised and represented various international entities in the investigation and prosecution of cross-border claims involving commercial fraud and breaches of fiduciary duties, and the recovery of assets globally.
+    description: `Abhishek heads the Restructuring &amp; Insolvency, Competition &amp; Antitrust and Trade Practice. He
+enjoys an extensive practice particularly in corporate restructuring and contentious insolvency, as
+well as financial disputes, investigations, fraud and asset recovery. With over 20 years of experience,
+Abhishek has been a forerunner in niche areas of the law, including Competition (merger control,
+cartels, investigations, etc), Trade (export controls, FTAs, sanctions etc), and Consumer Protection.
+He has strong secondary practices in Employment, Environmental (EHS) &amp; Sustainability (ESG),
+Corporate Governance and Telco/Media Laws.
 
-Abhishek’s practice also encompasses shareholder disputes, directors’ liability, project-related disputes and high stake insolvency matters. He actively advises clients in banking facilities, syndicated loans, project finance, trade facilities and debt restructurings. Abhishek has acted for both purchasers and sellers in a wide range of cross-border and local merger and acquisition transactions. He also advises regularly on transfer of businesses and undertakings, statutory amalgamations, joint ventures, partnership agreements, group reorganisations and company disposals. 
- 
-Abhishek regularly represents multinational corporations in courts & tribunals across India, including the National Company Law Tribunal, the National Company Law Appellate Tribunal and the Supreme Court of India. 
- 
-Abhishek has represented large US, Japanese, Chinese, European and Indian clients in projects under various phases of development including both greenfield and rehabilitation projects, where he advised in all aspects of investment structuring and restructuring, including for efficient tax and stamp duty, statutory and regulatory approvals, project documentation including financing documentations, exchange control and issues governing return on equity.
-`,
+Abhishek has been at the forefront of major restructurings and insolvencies in the region, and has
+experience acting for debtors and financial institution creditors in corporate restructuring exercises,
+He has also advised and represented various international entities in the investigation and
+prosecution of cross-border claims involving commercial fraud and breaches of fiduciary duties, and
+the recovery of assets globally.
+
+Abhishek’s practice also encompasses shareholder disputes, directors’ liability, project-related
+disputes and high stake insolvency matters. He actively advises clients in banking facilities,
+syndicated loans, project finance, trade facilities and debt restructurings. Abhishek has acted for
+both purchasers and sellers in a wide range of cross-border and local merger and acquisition
+transactions. He also advises regularly on transfer of businesses and undertakings, statutory
+amalgamations, joint ventures, partnership agreements, group reorganisations and company
+disposals.
+
+Abhishek regularly represents multinational corporations in courts &amp; tribunals across India, including
+the National Company Law Tribunal, the National Company Law Appellate Tribunal and the Supreme
+Court of India.
+
+Abhishek has represented large US, Japanese, Chinese, European and Indian clients in projects under
+various phases of development including both greenfield and rehabilitation projects, where he
+advised in all aspects of investment structuring and restructuring, including for efficient tax and
+stamp duty, statutory and regulatory approvals, project documentation including financing
+documentations, exchange control and issues governing return on equity.`,
     mobile: "+91 9999 201 504",
     email: "abhishek@asplaw.in",
   },
@@ -66,11 +100,22 @@ She regularly advises multinational corporations on day-to-day legal and regulat
     image: "/peopleImg/pavni.jpg",
     name: "Pavni Tuli",
     bio: "Dispute Resolution and International Arbitration practice",
-    description: `Pavni is a part of the firm’s Dispute Resolution and International Arbitration practice. She regularly advises and represents international clients in complex commercial disputes across a broad range of sectors, including infrastructure, transportation, and natural resources, in the emerging markets throughout Asia, the Middle East, and America with a particular focus on arbitration-related matters.
- 
-Her experience includes advising clients in domestic and international arbitrations, as well as handling litigation arising out of commercial disputes before various courts and tribunals in India. She is involved in all stages of dispute resolution, including pre-dispute strategy, pleadings, and post-award enforcement and challenge proceedings. She is actively involved in the firm’s compliance and monitorship matters.
- 
-Pavni also extensively advises clients in the food and pharmaceutical sector and real estate providing support on regulatory matters.
+    description: `Pavni is a part of the firm’s Dispute Resolution and International Arbitration
+practice. She regularly advises and represents international clients in complex
+commercial disputes across a broad range of sectors, including infrastructure,
+transportation, and natural resources, in the emerging markets throughout
+Asia, the Middle East, and America with a particular focus on arbitration-
+related matters.
+
+Her experience includes advising clients in domestic and international
+arbitrations, as well as handling litigation arising out of commercial disputes
+before various courts and tribunals in India. She is involved in all stages of
+dispute resolution, including pre-dispute strategy, pleadings, and post-award
+enforcement and challenge proceedings. She is actively involved in the firm’s
+compliance and monitorship matters.
+
+Pavni also extensively advises clients in the food and pharmaceutical sector
+and real estate providing support on regulatory matters.
 `,
     mobile: "+91 9582 931 684",
     email: "asp@asplaw.in",
@@ -80,9 +125,18 @@ Pavni also extensively advises clients in the food and pharmaceutical sector and
     image: "/peopleImg/bhaskar.png",
     name: "Bhaskar Joshi",
     bio: "Civil and Commercial Litigation",
-    description: `Bhaskar is part of the firm’s Litigation team. His practice focuses on civil and commercial litigation and dispute resolution, including commercial suits, recovery proceedings, partition disputes, and matters under the Negotiable Instruments Act, 1881. He also has extensive experience in handling real estate disputes, including issues arising out of builder-buyer agreements and property-related litigation. He regularly represents clients before various courts and tribunals, assisting in strategizing and managing complex disputes across different stages of litigation.
- 
-In addition, Bhaskar advises clients on a range of advisory and employment-related matters, including labour law compliance, workplace disputes, and regulatory issues. He works closely with clients to provide practical and business-oriented solutions, ensuring effective risk mitigation and dispute management.
+    description: `Bhaskar is part of the firm’s Litigation team. His practice focuses on civil and
+commercial litigation and dispute resolution, including commercial suits, recovery
+proceedings, partition disputes, and matters under the Negotiable Instruments Act,
+1881. He also has extensive experience in handling real estate disputes, including
+issues arising out of builder-buyer agreements and property-related litigation. He
+regularly represents clients before various courts and tribunals, assisting in
+strategizing and managing complex disputes across different stages of litigation.
+
+In addition, Bhaskar advises clients on a range of advisory and employment-related
+matters, including labour law compliance, workplace disputes, and regulatory issues.
+He works closely with clients to provide practical and business-oriented solutions,
+ensuring effective risk mitigation and dispute management.
 `,
     mobile: "+91 9871 868 575",
     email: "asp@asplaw.in",
@@ -117,11 +171,11 @@ Sulabh’s practice also has a strong focus on regulatory contentious matters an
   },
   {
     id: 8,
-    image: "/peopleImg/diksha.jpeg",
+    image: "/peopleImg/diksha.png",
     name: "Diksha Singh",
     bio: "Corporate & Commercial",
     description: `Diksha is a part of the firm’s Corporate and Commercial Practice group. Her  practice spans across public market M&A, buybacks, joint ventures and private equity transactions. She extensively advises Indian and international clients on Indian corporate and securities laws matters.
- 
+
 Diskha specializes in general corporate advisory and transactional matters with a strong emphasis on Private Equity and M&A transactions. She has represented prominent corporate houses, promoters, private equity funds and financial institutions in complex M&A transactions and private equity investments. She has a diverse portfolio of work across various sectors, including financial services, e-commerce, consumer goods, retail, pharmaceuticals, manufacturing, auto industry, and infrastructure.
 `,
     mobile: "+91 8447 309 799",
@@ -143,11 +197,11 @@ Swati advises clients on corporate, secretarial, and regulatory matters, includi
   },
   {
     id: 9,
-    image: "/peopleImg/alrip.jpeg",
+    image: "/peopleImg/alrip.png",
     name: "Alrip Lepcha",
     bio: "M&A",
     description: `Alrip specialises in advising on M&A, Private Equity transactions and Corporate Governance. She has extensive experience in advising large Indian groups, Global corporations, and Private Equity clients on complex transactions. She regularly advises listed companies, their sponsors, acquirers and investors on a broad range of transactions including control acquisitions and exits, corporate restructurings and joint ventures.
- 
+
 Given her experience in the corporate and commercial practice and advising various stakeholders, Alrip is an integral part of the Firm’s corporate governance initiatives and advisory practice and regularly advises boards on corporate governance and crisis management.
 `,
     mobile: "+91 9953 448 968",
