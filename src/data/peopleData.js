@@ -79,7 +79,7 @@ documentations, exchange control and issues governing return on equity.`,
 Irith also works on international and domestic arbitrations and commercial litigation. He has acted as counsel in high-value cross-border arbitrations, including ICC arbitrations, with a focus on infrastructure and construction disputes involving complex delay, disruption, and quantum issues. He extensively advises clients on post ward litigation including enforcement, setting aside and modifications of arbitration awards. 
 `,
     mobile: "+91 9717 578 989",
-    email: "asp@asplaw.in",
+    email: "irith@asplaw.in",
   },
   {
     id: 4,
@@ -93,7 +93,7 @@ Her expertise extends to a broad spectrum of commercial contracts, such as joint
 She regularly advises multinational corporations on day-to-day legal and regulatory matters, including corporate compliance, data protection and EPR. In addition to her corporate and commercial work, she has vast experience across multiple practice areas, including matters relating to customs valuation, insurance, and real estate transactions.
 `,
     mobile: "+91 9930 103 801",
-    email: "asp@asplaw.in",
+    email: "annaleesha@asplaw.in",
   },
   {
     id: 5,
@@ -118,7 +118,7 @@ Pavni also extensively advises clients in the food and pharmaceutical sector
 and real estate providing support on regulatory matters.
 `,
     mobile: "+91 9582 931 684",
-    email: "asp@asplaw.in",
+    email: "pavni@asplaw.in",
   },
   {
     id: 6,
