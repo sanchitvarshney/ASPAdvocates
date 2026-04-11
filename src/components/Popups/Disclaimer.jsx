@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import SolidBtn from "../Buttons/SolidBtn";
-import { useCookies } from "react-cookie";
 
-const Disclaimer = ({ setShowPopup, showPopup }) => {
-  const [cookies, setCookie] = useCookies(["userConsent"]);
-  const [isVisible, setIsVisible] = useState(false);
+const Disclaimer = () => {
+  const [isVisible, setIsVisible] = useState(true);
 
-  useEffect(() => {
-    if (!cookies.userConsent) {
-      setIsVisible(true);
-    }
-  }, [cookies]);
   const handleAccept = () => {
-    setCookie("userConsent", true, { path: "/", maxAge: 365 * 24 * 60 * 60 }); // 1 year expiry
     setIsVisible(false);
   };
   return (
@@ -29,7 +21,7 @@ const Disclaimer = ({ setShowPopup, showPopup }) => {
         <p>There has been no advertisement, personal communication, solicitation, invitation or inducement of any sort whatsoever from us or any of our members to solicit any work through this website;</p>
         <p>The user wishes to gain more information about us for his/her own information and use;</p>
         <p>
-          The information about us is provided to the user only on his/her specific request and any information obtained through this website is completely at the user's volition and any transmission, receipt or use of this site would not create any lawyer-client relationship
+          The information about us is provided to the user only on his/her specific request and any information obtained through this website is completely at the user&apos;s volition and any transmission, receipt or use of this site would not create any lawyer-client relationship
         </p>
         <p>
           The information provided under this website is solely available at your request for informational purposes only, should not be interpreted as soliciting or advertisement. We are not liable for any consequence of any action taken by the user relying on material /
