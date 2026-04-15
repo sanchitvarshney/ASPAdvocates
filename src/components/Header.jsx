@@ -104,7 +104,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li onClick={() => setToggle(false)}>
-            <NavLink to={"/contact"}>Contact</NavLink>
+            <NavLink to={"/contact"}>Contact Us</NavLink>
           </li>
         </ul>
       </Sidebar>
