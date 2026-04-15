@@ -119,6 +119,24 @@ const AcoladsSlider = () => {
             </div>
           </a>
         </SwiperSlide>
+        <SwiperSlide>
+          {/* <a href="https://www.legalpowerlists.com/winners-2023" target="_blank"> */}
+            <div className="card forbes2023">
+              <div className="image">
+                <img src="/lexaBadge.png" alt="Lexa Badge" />
+              </div>
+            </div>
+          {/* </a> */}
+        </SwiperSlide>
+        <SwiperSlide>
+          {/* <a href="https://www.legalpowerlists.com/winners-2023" target="_blank"> */}
+            <div className="card forbes2023">
+              <div className="image">
+                <img src="/lexaBadgeLawFirm.png" alt="Lexa Badge Law Firm" />
+              </div>
+            </div>
+          {/* </a> */}
+        </SwiperSlide>
       </Swiper>
     </Wrapper>
   );
