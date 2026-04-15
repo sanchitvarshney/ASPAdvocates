@@ -57,7 +57,7 @@ const Header = () => {
                   </div> */}
                 </li>
                 <li>
-                  <NavLink to={"/contact"}>Contact</NavLink>
+                  <NavLink to={"/contact"}>Contact Us</NavLink>
                 </li>
               </ul>
               <div className="btn">

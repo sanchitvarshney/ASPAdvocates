@@ -170,18 +170,6 @@ Sulabh’s practice also has a strong focus on regulatory contentious matters an
     email: "asp@asplaw.in",
   },
   {
-    id: 8,
-    image: "/peopleImg/diksha.png",
-    name: "Diksha Singh",
-    bio: "Corporate & Commercial",
-    description: `Diksha is a part of the firm’s Corporate and Commercial Practice group. Her  practice spans across public market M&A, buybacks, joint ventures and private equity transactions. She extensively advises Indian and international clients on Indian corporate and securities laws matters.
-
-Diskha specializes in general corporate advisory and transactional matters with a strong emphasis on Private Equity and M&A transactions. She has represented prominent corporate houses, promoters, private equity funds and financial institutions in complex M&A transactions and private equity investments. She has a diverse portfolio of work across various sectors, including financial services, e-commerce, consumer goods, retail, pharmaceuticals, manufacturing, auto industry, and infrastructure.
-`,
-    mobile: "+91 8447 309 799",
-    email: "asp@asplaw.in",
-  },
-  {
     id: 9,
     image: "/peopleImg/swati.png",
     name: "Swati Mishra",
@@ -196,7 +184,7 @@ Swati advises clients on corporate, secretarial, and regulatory matters, includi
     email: "asp@asplaw.in",
   },
   {
-    id: 9,
+    id: 10,
     image: "/peopleImg/alrip.png",
     name: "Alrip Lepcha",
     bio: "M&A",
