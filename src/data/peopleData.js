@@ -5,14 +5,14 @@ const peopleData = [
     name: "Abhixit Singh",
     bio: "Partner",
     description: `Abhixit Singh is an experienced counsel and heads the firm’s practice of International Arbitration and
-Construction &amp; Projects. He advises and represents clients on complex, cross-border investments
+Construction & Projects. He advises and represents clients on complex, cross-border investments
 and projects, and acts in high-stakes disputes. He regularly arbitrates under the rules of the major
 arbitral institutions, as well as under the UNCITRAL Rules. Abhixit also serves as a Specialist Mediator
 with the Singapore International Mediation Centre.
 
 Abhixit also regularly works with client project teams during the design and construction phases of
 projects to help them to resolve contractual issues and disputes or to mitigate their impact as and
-when they arise, with a view to avoiding expensive litigation and arbitration. /n
+when they arise, with a view to avoiding expensive litigation and arbitration.
 
 In addition to arbitration and commercial litigation, Abhixit Singh has substantial experience in
 representing multinationals in trade and customs matters, as well as in all aspects of their licensing
@@ -22,7 +22,7 @@ compliance and investigations. Abhixit’s practice focuses on highly regulated 
 telecommunications, e-commerce, tobacco, alcohol, pharmaceutical, and food and beverage.
 
 Abhixit also specialises in foreign investment, where he has assisted in facilitating and closing
-multiple M&amp;A transactions across major industries. He is also regarded by clients for his
+multiple M&A transactions across major industries. He is also regarded by clients for his
 responsiveness and expertise in particularly greenfield investments, and he has been behind the
 setup of a large number of companies in India.
 `,
@@ -34,12 +34,12 @@ setup of a large number of companies in India.
     image: "/peopleImg/abhishek.png",
     name: "Abhishek Seth",
     bio: "Partner",
-    description: `Abhishek heads the Restructuring &amp; Insolvency, Competition &amp; Antitrust and Trade Practice. He
+    description: `Abhishek heads the Restructuring & Insolvency, Competition & Antitrust and Trade Practice. He
 enjoys an extensive practice particularly in corporate restructuring and contentious insolvency, as
 well as financial disputes, investigations, fraud and asset recovery. With over 20 years of experience,
 Abhishek has been a forerunner in niche areas of the law, including Competition (merger control,
 cartels, investigations, etc), Trade (export controls, FTAs, sanctions etc), and Consumer Protection.
-He has strong secondary practices in Employment, Environmental (EHS) &amp; Sustainability (ESG),
+He has strong secondary practices in Employment, Environmental (EHS) & Sustainability (ESG),
 Corporate Governance and Telco/Media Laws.
 
 Abhishek has been at the forefront of major restructurings and insolvencies in the region, and has
@@ -56,7 +56,7 @@ transactions. He also advises regularly on transfer of businesses and undertakin
 amalgamations, joint ventures, partnership agreements, group reorganisations and company
 disposals.
 
-Abhishek regularly represents multinational corporations in courts &amp; tribunals across India, including
+Abhishek regularly represents multinational corporations in courts & tribunals across India, including
 the National Company Law Tribunal, the National Company Law Appellate Tribunal and the Supreme
 Court of India.
 

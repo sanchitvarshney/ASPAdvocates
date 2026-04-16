@@ -4,22 +4,38 @@ import ProfileCard from "../components/Cards/ProfileCard";
 import PersonProfileModal from "../components/Cards/PersonProfileModal";
 import peopleData from "../data/peopleData";
 
+const PARTNER_IDS = new Set([1, 2]);
+
 const OurPeoplePage = () => {
   const [modalPerson, setModalPerson] = useState(null);
   const openModal = useCallback((person) => setModalPerson(person), []);
   const closeModal = useCallback(() => setModalPerson(null), []);
+
+  const partners = peopleData.filter((p) => PARTNER_IDS.has(p.id));
+  const otherPeople = peopleData.filter((p) => !PARTNER_IDS.has(p.id));
 
   return (
     <Wrapper>
       <div className="people-directory">
         <div className="container">
           <hr data-aos="fade-in" data-aos-delay="300" />
-          <div className="cards-container">
-            {peopleData.map((person) => (
-              <div key={person.id} className="people-card-slot">
-                <ProfileCard person={person} onViewClick={openModal} />
+          <div className="people-cards">
+            <div className="partners-row">
+              {partners.map((person) => (
+                <div key={person.id} className="people-card-slot">
+                  <ProfileCard person={person} onViewClick={openModal} />
+                </div>
+              ))}
+            </div>
+            {otherPeople.length > 0 ? (
+              <div className="team-grid">
+                {otherPeople.map((person) => (
+                  <div key={person.id} className="people-card-slot">
+                    <ProfileCard person={person} onViewClick={openModal} />
+                  </div>
+                ))}
               </div>
-            ))}
+            ) : null}
           </div>
         </div>
       </div>
@@ -108,39 +124,58 @@ const Wrapper = styled.section`
       margin-top: 20px;
       max-width: 800px;
     }
-    .cards-container {
-      display: grid;
+    .people-cards {
       width: 100%;
       margin-top: 80px;
       padding-top: 56px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      column-gap: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .partners-row {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 60px;
+      width: 100%;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      margin-top: clamp(100px, 15vw, 200px);
+      gap: 60px;
       row-gap: clamp(100px, 15vw, 200px);
     }
 
-    .cards-container > .people-card-slot:nth-child(-n + 1) {
-      grid-column: span 2;
-      margin-left: 200px;
-    }
-    .cards-container > .people-card-slot:nth-child(2) {
-      margin-left: -200px;
+    .people-card-slot {
+      flex: 0 1 380px;
+      max-width: min(380px, 100%);
+      min-width: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
 
   @media only screen and (max-width: 1100px) {
     .people-directory {
-      .cards-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .people-cards {
         margin-top: 44px;
         padding-top: 32px;
-        row-gap: 120px;
-        column-gap: 24px;
       }
-      .cards-container > .people-card-slot:nth-child(-n + 2) {
-        grid-column: span 1;
-        margin-top: 40px;
-        padding-top: 0px;
-        margin-left: 0px;
+      .partners-row {
+        gap: 24px;
+      }
+      .team-grid {
+        margin-top: 120px;
+        gap: 24px;
+        row-gap: 120px;
       }
     }
   }
@@ -148,17 +183,28 @@ const Wrapper = styled.section`
   @media only screen and (max-width: 768px) {
     .people-directory {
       padding: 40px 0 60px;
-      .cards-container {
-        grid-template-columns: 1fr;
+      .container {
+        padding: 0 16px;
+      }
+      .people-cards {
         margin-top: 32px;
-        padding-top: 16px;
+        padding-top: 24px;
+      }
+      .partners-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        align-items: stretch;
+      }
+      .partners-row .people-card-slot {
+        flex: none;
+        max-width: none;
+        min-width: 0;
+      }
+      .team-grid {
+        margin-top: 88px;
         row-gap: 88px;
         column-gap: 0;
-      }
-      .cards-container > .people-card-slot:nth-child(-n + 1) {
-        grid-column: span 1;
-        margin-top: 40px;
-        padding-top: 0px;
       }
       h1 {
         font-size: 28px;

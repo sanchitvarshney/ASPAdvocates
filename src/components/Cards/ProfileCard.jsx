@@ -216,16 +216,42 @@ const Card = styled.div`
     }
   }
 
-  @media (max-width: 480px) {
-    padding: 72px 16px 18px;
-    max-width: 100%;
+  @media (max-width: 768px) {
+    padding: 16px 10px 16px;
+    min-height: 0;
 
     .image {
-      transform: translate(-50%, -36%);
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      margin: 0 auto 12px;
+      z-index: 1;
 
       img {
-        height: 200px;
+        width: 100%;
+        max-width: 160px;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        max-height: 200px;
       }
+    }
+
+    .content {
+      padding-top: 0;
+    }
+  }
+
+  @media (max-width: 380px) {
+    padding: 14px 8px 14px;
+
+    .image img {
+      max-width: 140px;
+      max-height: 175px;
+    }
+
+    .content h3 {
+      font-size: 1.05rem;
     }
   }
 `;
